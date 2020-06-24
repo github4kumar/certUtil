@@ -79,10 +79,10 @@ public class InstallCert {
             }
         }
         System.out.println("Loading KeyStore " + file + "...");
-        InputStream in = new FileInputStream(file);
+        InputStream input = new FileInputStream(file);
         KeyStore ks = KeyStore.getInstance(KeyStore.getDefaultType());
-        ks.load(in, passphrase);
-        in.close();
+        ks.load(input, passphrase);
+        input.close();
 
         if (useProxy) {
             proxyAddr = new InetSocketAddress(proxyHost, proxyPort);
